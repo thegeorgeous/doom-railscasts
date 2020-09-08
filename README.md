@@ -4,15 +4,9 @@ The Railscasts theme ported to the Doom Emacs theming API
 
 ## How to install
 
-Add this to `packages.el` in your `.doom.d` folder
-``` emacs-lisp
-(package! doom-railscasts
-  :recipe (:host github :repo "thegeorgeous/doom-railscasts"))
-```
-
-Then add this to `config.el`
+* Copy the `doom-railscasts-theme.el` file to `~/.doom.d/themes/`
+* In `config.el` change the doom theme
 
 ``` emacs-lisp
-(load-theme `doom-railscasts)
+(setq doom-theme 'doom-railscasts)
 ```
-

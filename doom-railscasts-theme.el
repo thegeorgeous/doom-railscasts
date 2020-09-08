@@ -8,65 +8,65 @@
 (require 'doom-themes)
 
 ;;
-(defgroup doom-railscasts-reloaded-theme nil
+(defgroup doom-railscasts-theme nil
   "Options for doom-themes"
   :group 'doom-themes)
 
-(defcustom doom-railscasts-reloaded-brighter-modeline nil
+(defcustom doom-railscasts-brighter-modeline nil
   "If non-nil, more vivid colors will be used to style the mode-line."
-  :group 'doom-railscasts-reloaded-theme
+  :group 'doom-railscasts-theme
   :type 'boolean)
 
-(defcustom doom-railscasts-reloaded-brighter-comments nil
+(defcustom doom-railscasts-brighter-comments nil
   "If non-nil, comments will be highlighted in more vivid colors."
-  :group 'doom-railscasts-reloaded-theme
+  :group 'doom-railscasts-theme
   :type 'boolean)
 
-(defcustom doom-railscasts-reloaded-comment-bg doom-railscasts-reloaded-brighter-comments
+(defcustom doom-railscasts-comment-bg doom-railscasts-brighter-comments
   "If non-nil, comments will have a subtle, darker background.
 Enhances their legibility."
-  :group 'doom-railscasts-reloaded-theme
+  :group 'doom-railscasts-theme
   :type 'boolean)
 
-(defcustom doom-railscasts-reloaded-padded-modeline doom-themes-padded-modeline
+(defcustom doom-railscasts-padded-modeline doom-themes-padded-modeline
   "If non-nil, adds a 4px padding to the mode-line.
 Can be an integer to determine the exact padding."
-  :group 'doom-railscasts-reloaded-theme
+  :group 'doom-railscasts-theme
   :type '(choice integer boolean))
 
 ;;
-(def-doom-theme doom-railscasts-reloaded
-  "An implementation of the popular Railscasts-Reloaded theme."
+(def-doom-theme doom-railscasts
+  "An implementation of the popular Railscasts theme."
 
   ;; name        default   256       16
-  ((bg         '("#232323" nil       nil            )) ;; railscasts-reloaded-bg
-   (bg-alt     '("#383838" nil       nil            )) ;; railscasts-reloaded-bg-05
-   (base0      '("#000000" "black"   "black"        )) ;; railscasts-reloaded-bg-2
-   (base1      '("#2B2B2B" "#1e1e1e" "brightblack"  )) ;; railscasts-reloaded-bg-1
-   (base2      '("#303030" "#2e2e2e" "brightblack"  )) ;; railscasts-reloaded-bg-08
-   (base3      '("#383838" "#262626" "brightblack"  )) ;; railscasts-reloaded-bg-05
-   (base4      '("#494949" "#3f3f3f" "brightblack"  )) ;; railscasts-reloaded-bg+05
-   (base5      '("#4F4F4F" "#525252" "brightblack"  )) ;; railscasts-reloaded-bg+1
-   (base6      '("#5F5F5F" "#6b6b6b" "brightblack"  )) ;; railscasts-reloaded-bg+2
-   (base7      '("#6F6F6F" "#979797" "brightblack"  )) ;; railscasts-reloaded-bg+3
-   (base8      '("#FFFFEF" "#dfdfdf" "white"        )) ;; railscasts-reloaded-fg+1
-   (fg         '("#E6E1DC" "#bfbfbf" "brightwhite"  )) ;; railscasts-reloaded-fg
-   (fg-alt     '("#989890" "#2d2d2d" "white"        )) ;; railscasts-reloaded-fg-05
+  ((bg         '("#232323" nil       nil            )) ;; railscasts-bg
+   (bg-alt     '("#383838" nil       nil            )) ;; railscasts-bg-05
+   (base0      '("#000000" "black"   "black"        )) ;; railscasts-bg-2
+   (base1      '("#2B2B2B" "#1e1e1e" "brightblack"  )) ;; railscasts-bg-1
+   (base2      '("#303030" "#2e2e2e" "brightblack"  )) ;; railscasts-bg-08
+   (base3      '("#383838" "#262626" "brightblack"  )) ;; railscasts-bg-05
+   (base4      '("#494949" "#3f3f3f" "brightblack"  )) ;; railscasts-bg+05
+   (base5      '("#4F4F4F" "#525252" "brightblack"  )) ;; railscasts-bg+1
+   (base6      '("#5F5F5F" "#6b6b6b" "brightblack"  )) ;; railscasts-bg+2
+   (base7      '("#6F6F6F" "#979797" "brightblack"  )) ;; railscasts-bg+3
+   (base8      '("#FFFFEF" "#dfdfdf" "white"        )) ;; railscasts-fg+1
+   (fg         '("#E6E1DC" "#bfbfbf" "brightwhite"  )) ;; railscasts-fg
+   (fg-alt     '("#989890" "#2d2d2d" "white"        )) ;; railscasts-fg-05
 
    (grey       base4)
-   (red        '("#DA4938" "#ff6655" "red"          )) ;; railscasts-reloaded-red
-   (orange     '("#CC7733" "#dd8844" "brightred"    )) ;; railscasts-reloaded-orange
-   (green      '("#A5C160" "#99bb66" "green"        )) ;; railscasts-reloaded-green
-   (teal       '("#4db5bd" "#44b9b1" "brightgreen"  )) ;; railscasts-reloaded-??
-   (yellow     '("#FFC66D" "#ECBE7B" "yellow"       )) ;; railscasts-reloaded-yellow
-   (blue       '("#6D9CBD" "#51afef" "brightblue"   )) ;; railscasts-reloaded-blue
-   (dark-blue  '("#577C97" "#2257A0" "blue"         )) ;; railscasts-reloaded-??
-   (magenta    '("#DA3878" "#c678dd" "brightmagenta")) ;; railscasts-reloaded-magenta
-   (violet     '("#4938DA" "#a9a1e1" "magenta"      )) ;; railscasts-reloaded-??
-   (cyan       '("#38C9DA" "#46D9FF" "brightcyan"   )) ;; railscasts-reloaded-cyan
-   (dark-cyan  '("#2CA0AE" "#5699AF" "cyan"         )) ;; railscasts-reloaded-??
+   (red        '("#DA4938" "#ff6655" "red"          )) ;; railscasts-red
+   (orange     '("#CC7733" "#dd8844" "brightred"    )) ;; railscasts-orange
+   (green      '("#A5C160" "#99bb66" "green"        )) ;; railscasts-green
+   (teal       '("#4db5bd" "#44b9b1" "brightgreen"  )) ;; railscasts-??
+   (yellow     '("#FFC66D" "#ECBE7B" "yellow"       )) ;; railscasts-yellow
+   (blue       '("#6D9CBD" "#51afef" "brightblue"   )) ;; railscasts-blue
+   (dark-blue  '("#577C97" "#2257A0" "blue"         )) ;; railscasts-??
+   (magenta    '("#DA3878" "#c678dd" "brightmagenta")) ;; railscasts-magenta
+   (violet     '("#4938DA" "#a9a1e1" "magenta"      )) ;; railscasts-??
+   (cyan       '("#38C9DA" "#46D9FF" "brightcyan"   )) ;; railscasts-cyan
+   (dark-cyan  '("#2CA0AE" "#5699AF" "cyan"         )) ;; railscasts-??
 
-   ;; Extra railscasts-reloaded colors
+   ;; Extra railscasts colors
    (fg-1       '("#B8B4B0"))
    (fg+2       '("#EBE7E3"))
    (red-4      '("#822B21"))
@@ -112,10 +112,10 @@ Can be an integer to determine the exact padding."
 
    ;; custom categories
    (hidden     `(,(car bg) "black" "black"))
-   (-modeline-bright doom-railscasts-reloaded-brighter-modeline)
+   (-modeline-bright doom-railscasts-brighter-modeline)
    (-modeline-pad
-    (when doom-railscasts-reloaded-padded-modeline
-      (if (integerp doom-railscasts-reloaded-padded-modeline) doom-railscasts-reloaded-padded-modeline 4)))
+    (when doom-railscasts-padded-modeline
+      (if (integerp doom-railscasts-padded-modeline) doom-railscasts-padded-modeline 4)))
 
    (modeline-fg     fg)
    (modeline-fg-alt base5)
@@ -139,7 +139,7 @@ Can be an integer to determine the exact padding."
 
    (font-lock-comment-face
     :foreground comments
-    :background (if doom-railscasts-reloaded-comment-bg (doom-lighten bg 0.05)))
+    :background (if doom-railscasts-comment-bg (doom-lighten bg 0.05)))
    (font-lock-doc-face
     :inherit 'font-lock-comment-face
     :foreground doc-comments)
@@ -397,4 +397,4 @@ Can be an integer to determine the exact padding."
   ()
   )
 
-;;; doom-railscasts-reloaded-theme.el ends here
+;;; doom-railscasts-theme.el ends here
